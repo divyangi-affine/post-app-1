@@ -1,0 +1,16 @@
+<!--Displaying a text in text area-->
+<textarea rows="6" [value] = "'text'"></textarea>
+<!--Displaying a text using property binding-->
+<textarea rows="6" [value] = "newPost"></textarea>
+<!--Displaying a text using property binding and input using ref-->
+<textarea rows="6" [value] = "newPost" #postInput></textarea>
+<!--Displaying a text using property binding and input using two way binding , add FormsModule-->
+<textarea rows="6" [(ngModel)] = "enteredValue"></textarea>
+<!--Adding mat input to it-->
+<textarea matInput rows="6" [(ngModel)] = "enteredValue" ></textarea>
+<hr>
+<!--Event Binding-->
+<button (click) = "onAddPost()">Save Post</button>
+<!--Interpolation-->
+<p>{{newPost}}</p> 
+<p>Two way data binding Result of last text area: {{enteredValue}}</p> 
