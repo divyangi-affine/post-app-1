@@ -36,7 +36,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                  sh '/usr/bin/npm --version'
+                  sh 'node --version'
             }
         }
     }
