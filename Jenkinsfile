@@ -36,7 +36,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                echo "Hey :)"
+                  sh 'npm --verison'
             }
         }
     }
