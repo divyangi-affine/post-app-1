@@ -34,13 +34,21 @@
 pipeline {
     agent any
     stages {
-        stage('build') {
+        stage('Check node is installed') {
             steps {
                   sh 'node --version'
             }
-             steps {
+        }
+         stage('Check npm is installed') {
+            steps {
                   sh 'npm --version'
             }
         }
+         stage('Done') {
+            steps {
+                  echo 'Done'
+            }
+        }
+       
     }
 }
