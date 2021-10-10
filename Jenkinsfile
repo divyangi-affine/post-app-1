@@ -38,6 +38,9 @@ pipeline {
             steps {
                   sh 'node --version'
             }
+             steps {
+                  sh 'npm --version'
+            }
         }
     }
 }
