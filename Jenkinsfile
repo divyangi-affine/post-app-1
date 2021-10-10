@@ -36,17 +36,17 @@ pipeline {
     stages {
         stage('Check node is installed') {
             steps {
-                  sh 'node --version'
+                  sh 'npm install'
             }
         }
          stage('Check npm is installed') {
             steps {
-                  sh 'npm --version'
+                  sh 'npm run build'
             }
         }
          stage('Done') {
             steps {
-                  echo 'Done'
+                   sh 'pm2 restart all'
             }
         }
        
